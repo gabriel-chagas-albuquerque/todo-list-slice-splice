@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas - Slice vs Splice</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Lista de Tarefas</h1>
+            <p>Demonstração dos métodos slice() e splice()</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section">
+                <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..." />
+                <button class="btn btn-primary" onclick="addTask()">Adicionar</button>
+            </section>
+
+            <section class="controls">
+                <button class="btn btn-secondary" onclick="showFirst3()">Primeiras 3 (slice)</button>
+                <button class="btn btn-secondary" onclick="showLast3()">Últimas 3 (slice)</button>
+                <button class="btn btn-secondary" onclick="showMiddle()">Meio (slice)</button>
+                
+                <div class="range-inputs">
+                    <span>Fatiar de:</span>
+                    <input type="number" id="startIndex" value="0" min="0">
+                    <span>até:</span>
+                    <input type="number" id="endIndex" value="2" min="0">
+                    <button class="btn btn-secondary" onclick="customSlice()">Slice Personalizado</button>
+                </div>
+
+                <button class="btn btn-secondary" onclick="removeFirst()">Remover Primeira (splice)</button>
+                <button class="btn btn-secondary" onclick="removeLast()">Remover Última (splice)</button>
+                <button class="btn btn-secondary" onclick="removeMiddle()">Remover do Meio (splice)</button>
+            </section>
+
+            <section class="method-demo">
+                <div class="demo-section">
+                    <h3>🔍 Resultado do SLICE (não modifica original)</h3>
+                    <div id="sliceResult" class="demo-result">Nenhum slice executado ainda...</div>
+                </div>
+                
+                <div class="demo-section">
+                    <h3>✂️ Resultado do SPLICE (modifica original)</h3>
+                    <div id="spliceResult" class="demo-result">Nenhum splice executado ainda...</div>
+                </div>
+            </section>
+
+            <section class="todo-list" id="todoList">
+                <!-- Tarefas serão inseridas aqui -->
+            </section>
+
+            <section class="diferencas">
+                <h3>📚 Diferenças:</h3>
+                <p><strong>slice():</strong> Cria uma cópia de parte do array sem modificar o original</p>
+                <p><strong>splice():</strong> Remove/adiciona elementos do array original, modificando-o</p>
+            </div>
+        </main>
+    </div>
+    <script src="./index.js"></script>
+</body>

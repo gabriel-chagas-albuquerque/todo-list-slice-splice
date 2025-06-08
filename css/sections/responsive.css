@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .method-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
